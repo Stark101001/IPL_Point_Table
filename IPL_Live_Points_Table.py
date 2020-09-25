@@ -1,4 +1,4 @@
-import requests
+import requests,time
 
 from bs4 import BeautifulSoup
 
@@ -7,10 +7,16 @@ def Points_table():
     # Printing the points like table wise :
 
     print("\n", "=" * 20, iplhead[0].text, "=" * 20)
+    
+    time.sleep(1)
+    
     print('\n', team[0].text, " " * 20, match[0].text, " ", match_won[0].text, " ",
           match_lost[0].text, " ", match_tied[0].text, " ", match_NR[0].text, " ",
           match_points[0].text, " ", match_NRR[0].text)
     print("\n")
+    
+    time.sleep(2)
+    
     print(team_all[0].text)
 
     print("\t" * 7, MI_pts[0].text, " " * 3, MI_pts[1].text, " " * 3, MI_pts[2].text,
